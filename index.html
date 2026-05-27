@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATM Machine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="atm-container">
+    <h2>ATM Machine</h2>
+    
+    <div class="atm-screen" id="atm-display">
+      
+      <div id="card-screen" class="screen-view">
+        <p class="screen-title">Welcome! Please insert your debit card to begin.</p>
+        <button class="screen-btn action-btn insert-card-btn" onclick="insertCard()">💳 Insert Card</button>
+      </div>
+
+      <div id="language-screen" class="screen-view hidden">
+        <p class="screen-title">Select Language / ಭಾಷೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ</p>
+        <div class="screen-buttons">
+          <button class="screen-btn" onclick="selectLanguage('en')">English</button>
+          <button class="screen-btn" onclick="selectLanguage('kn')">ಕನ್ನಡ</button>
+        </div>
+      </div>
+
+      <div id="pin-screen" class="screen-view hidden">
+        <p id="pin-prompt" class="screen-title">Enter Your 4-Digit PIN</p>
+        <input type="password" id="pin-input" maxlength="4" placeholder="••••" autocomplete="off">
+        <button class="screen-btn action-btn" onclick="verifyPin()" id="pin-submit-btn">Submit</button>
+      </div>
+
+      <div id="dashboard-screen" class="screen-view hidden">
+        <p id="status-text">Card Authenticated. Choose an option below.</p>
+      </div>
+
+    </div>
+
+    <div class="input-container">
+      <input type="number" id="amount" placeholder="Enter Amount" min="1" disabled>
+    </div>
+
+    <div class="button-grid">
+      <button class="btn deposit" id="btn-deposit" onclick="handleDeposit()" disabled>Deposit</button>
+      <button class="btn withdraw" id="btn-withdraw" onclick="handleWithdraw()" disabled>Withdraw</button>
+      <button class="btn check" id="btn-check" onclick="handleCheckBalance()" disabled>Check Balance</button>
+      <button class="btn reset" id="btn-reset" onclick="resetATM()">Eject Card / Exit</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

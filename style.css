@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #1e1e2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.atm-container {
+  background: #2b2b40;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  width: 420px;
+  text-align: center;
+}
+
+h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Simulated ATM Screen Monitor */
+.atm-screen {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #badbcc;
+}
+
+.screen-view {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.screen-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+.screen-buttons {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.screen-btn {
+  flex: 1;
+  padding: 12px;
+  background-color: #0f5132;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.screen-btn:hover {
+  background-color: #146c43;
+}
+
+.action-btn {
+  width: 70%;
+}
+
+.insert-card-btn {
+  background-color: #007bff;
+  font-size: 1.1rem;
+}
+.insert-card-btn:hover {
+  background-color: #0056b3;
+}
+
+#pin-input {
+  width: 50%;
+  padding: 8px;
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 5px;
+  border: 1px solid #badbcc;
+  border-radius: 5px;
+}
+
+#status-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.input-container input:disabled {
+  background-color: #44445c;
+  color: #888;
+  cursor: not-allowed;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.deposit { background: #28a745; color: white; }
+.withdraw { background: #dc3545; color: white; }
+.check { background: #007bff; color: white; }
+.reset { background: #ffc107; color: black; }
+
+/* Dynamic Display Controller Utility */
+.hidden {
+  display: none !important;
+}
