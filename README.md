@@ -1,121 +1,189 @@
-# ATM Machine Web Application
+# 🏧 ATM Machine Web Application
 
-## Overview
+A modern and responsive **ATM Simulator** built using **HTML, CSS, and JavaScript**. This project provides a realistic ATM experience where users can insert a virtual card, select a language, enter a PIN, check their balance, deposit money, withdraw money, and safely end their session.
 
-ATM Machine Web Application is a responsive web-based simulation of an Automated Teller Machine (ATM). The application allows users to insert a virtual card, select a language, verify a PIN, check account balance, deposit money, withdraw money, and eject the card.
+---
 
-The project is developed using HTML, CSS, and JavaScript and provides a user-friendly ATM interface.
+## 🚀 About the Project
 
-## Features
+The ATM Machine Web Application simulates the basic functionalities of a real ATM through an interactive web interface. It is designed to help beginners understand frontend web development concepts such as DOM manipulation, event handling, and user authentication logic.
 
-* Virtual Debit Card Insertion
-* Multi-Language Support (English and Kannada)
-* Secure PIN Verification
-* Balance Inquiry
+---
+
+## ✨ Features
+
+✅ Virtual Card Insertion
+
+✅ Multi-Language Support
+
+* English
+* Kannada
+
+✅ Secure PIN Verification
+
+✅ Balance Inquiry
+
+✅ Deposit Money
+
+✅ Withdraw Money
+
+✅ Input Validation
+
+✅ Card Ejection & Session Reset
+
+✅ Responsive User Interface
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology       | Purpose                       |
+| ---------------- | ----------------------------- |
+| HTML5            | Structure & Layout            |
+| CSS3             | Styling & Responsive Design   |
+| JavaScript (ES6) | Functionality & Interactivity |
+
+---
+
+## 📂 Project Structure
+
+```text
+ATM-Machine/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
+
+---
+
+## ▶️ How to Run
+
+### Step 1
+
+Download or clone the repository.
+
+### Step 2
+
+Open the project folder in VS Code.
+
+### Step 3
+
+Open `index.html` in your browser.
+
+### Step 4
+
+Click **Insert Card**.
+
+### Step 5
+
+Select your preferred language.
+
+### Step 6
+
+Enter the PIN:
+
+```text
+1234
+```
+
+### Step 7
+
+Perform ATM operations:
+
+* Check Balance
 * Deposit Money
 * Withdraw Money
-* Input Validation
-* Card Eject / Reset Functionality
-* Responsive ATM User Interface
+* Eject Card
 
-## Technologies Used
+---
 
-* HTML5
-* CSS3
-* JavaScript (ES6)
+## 🔐 Default Credentials
 
-## Project Structure
+### PIN
 
-ATM-Machine/
-
-├── index.html
-
-├── style.css
-
-├── script.js
-
-└── README.md
-
-## How to Run
-
-1. Download or clone the repository.
-
-2. Open the project folder in VS Code.
-
-3. Open `index.html` in a web browser.
-
-4. Click **Insert Card**.
-
-5. Select a language.
-
-6. Enter the PIN:
-
-   1234
-
-7. Perform ATM operations such as:
-
-   * Check Balance
-   * Deposit Money
-   * Withdraw Money
-
-## Default Credentials
-
-PIN:
-
+```text
 1234
+```
 
-Initial Balance:
+### Initial Balance
 
-₹53000
+```text
+₹53,000
+```
 
-## Functionalities
+---
 
-### Insert Card
+## 💳 Available Operations
+
+### 🏦 Insert Card
 
 Starts a new ATM session.
 
-### Language Selection
+### 🌐 Select Language
 
 Choose between English and Kannada.
 
-### PIN Verification
+### 🔑 PIN Verification
 
-Authenticates the user before enabling ATM operations.
+Authenticates the user before accessing ATM services.
 
-### Deposit
-
-Adds money to the current account balance.
-
-### Withdraw
-
-Deducts money from the account balance after validation.
-
-### Check Balance
+### 💰 Check Balance
 
 Displays the current account balance.
 
-### Eject Card
+### ➕ Deposit Money
 
-Ends the current session and resets the ATM.
+Adds money to the account balance.
 
-## Learning Outcomes
+### ➖ Withdraw Money
+
+Withdraws money after validating sufficient balance.
+
+### 🚪 Eject Card
+
+Ends the session and resets the ATM.
+
+---
+
+## 🎓 Learning Outcomes
 
 This project demonstrates:
 
 * DOM Manipulation
 * Event Handling
+* JavaScript Functions
 * Conditional Statements
-* Functions in JavaScript
 * User Authentication Logic
 * Responsive Web Design
 * Frontend Application Development
+* Form Validation
 
-## Author
+---
 
-Bhagyashree B
+## 🔮 Future Enhancements
+
+* Multiple User Accounts
+* Transaction History
+* Mini Statement
+* Fund Transfer Feature
+* PIN Change Option
+* Database Integration
+* Mobile App Version
+
+---
+
+## 👩‍💻 Author
+
+**Bhagyashree B**
 
 GitHub: https://github.com/bhagya2026
 
-## License
+---
+
+## 📄 License
 
 This project is created for educational and learning purposes.
+
+⭐ If you found this project useful, consider giving it a star on GitHub!
