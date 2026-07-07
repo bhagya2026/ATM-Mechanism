@@ -1,55 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ATM Machine</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ATM Machine Simulation">
+    <title>ATM Machine Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="atm-container">
-    <h2>ATM Machine</h2>
-    
-    <div class="atm-screen" id="atm-display">
-      
-      <div id="card-screen" class="screen-view">
-        <p class="screen-title">Welcome! Please insert your debit card to begin.</p>
-        <button class="screen-btn action-btn insert-card-btn" onclick="insertCard()">💳 Insert your Card</button>
-      </div>
+<main class="atm-container">
 
-      <div id="language-screen" class="screen-view hidden">
-        <p class="screen-title">Select Language / ಭಾಷೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ</p>
-        <div class="screen-buttons">
-          <button class="screen-btn" onclick="selectLanguage('en')">English</button>
-          <button class="screen-btn" onclick="selectLanguage('kn')">ಕನ್ನಡ</button>
+    <header>
+        <h1>🏦 ATM Machine</h1>
+    </header>
+
+    <!-- ATM Display -->
+    <section class="atm-screen" id="atm-display" aria-live="polite">
+
+        <!-- Card Screen -->
+        <div id="card-screen" class="screen-view">
+
+            <p class="screen-title">
+                Welcome!
+                <br>
+                Please insert your Debit Card to continue.
+            </p>
+
+            <button
+                type="button"
+                class="screen-btn action-btn insert-card-btn"
+                onclick="insertCard()">
+
+                💳 Insert Card
+
+            </button>
+
         </div>
-      </div>
 
-      <div id="pin-screen" class="screen-view hidden">
-        <p id="pin-prompt" class="screen-title">Enter Your 4-Digit PIN</p>
-        <input type="password" id="pin-input" maxlength="4" placeholder="••••" autocomplete="off">
-        <button class="screen-btn action-btn" onclick="verifyPin()" id="pin-submit-btn">Submit</button>
-      </div>
+        <!-- Language Screen -->
+        <div id="language-screen" class="screen-view hidden">
 
-      <div id="dashboard-screen" class="screen-view hidden">
-        <p id="status-text">Card Authenticated. Choose an option below.</p>
-      </div>
+            <p class="screen-title">
+                Select Your Language
+                <br>
+                ಭಾಷೆಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ
+            </p>
 
-    </div>
+            <div class="screen-buttons">
 
-    <div class="input-container">
-      <input type="number" id="amount" placeholder="Enter Amount" min="1" disabled>
-    </div>
+                <button
+                    type="button"
+                    class="screen-btn"
+                    onclick="selectLanguage('en')">
 
-    <div class="button-grid">
-      <button class="btn deposit" id="btn-deposit" onclick="handleDeposit()" disabled>Deposit</button>
-      <button class="btn withdraw" id="btn-withdraw" onclick="handleWithdraw()" disabled>Withdraw</button>
-      <button class="btn check" id="btn-check" onclick="handleCheckBalance()" disabled>Check Balance</button>
-      <button class="btn reset" id="btn-reset" onclick="resetATM()">Eject Card / Exit</button>
-    </div>
-  </div>
+                    🇬🇧 English
 
-  <script src="script.js"></script>
+                </button>
+
+                <button
+                    type="button"
+                    class="screen-btn"
+                    onclick="selectLanguage('kn')">
+
+                    🇮🇳 ಕನ್ನಡ
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- PIN Screen -->
+        <div id="pin-screen" class="screen-view hidden">
+
+            <label for="pin-input" id="pin-prompt" class="screen-title">
+                Enter Your 4-Digit PIN
+            </label>
+
+            <input
+                type="password"
+                id="pin-input"
+                maxlength="4"
+                minlength="4"
+                inputmode="numeric"
+                placeholder="••••"
+                autocomplete="off"
+                required
+                aria-label="Enter ATM PIN">
+
+            <button
+                type="button"
+                id="pin-submit-btn"
+                class="screen-btn action-btn"
+                onclick="verifyPin()">
+
+                ✅ Verify PIN
+
+            </button>
+
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard-screen" class="screen-view hidden">
+
+            <h3>Welcome!</h3>
+
+            <p id="status-text">
+                Card authenticated successfully.
+                <br>
+                Please choose a transaction.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Amount Input -->
+    <section class="input-container">
+
+        <label for="amount" class="screen-title">
+            Transaction Amount
+        </label>
+
+        <input
+            type="number"
+            id="amount"
+            min="1"
+            step="1"
+            placeholder="Enter Amount"
+            disabled
+            autocomplete="off"
+            aria-label="Enter transaction amount">
+
+    </section>
+
+    <!-- Buttons -->
+    <section class="button-grid">
+
+        <button
+            type="button"
+            id="btn-deposit"
+            class="btn deposit"
+            onclick="handleDeposit()"
+            disabled>
+
+            💰 Deposit
+
+        </button>
+
+        <button
+            type="button"
+            id="btn-withdraw"
+            class="btn withdraw"
+            onclick="handleWithdraw()"
+            disabled>
+
+            💵 Withdraw
+
+        </button>
+
+        <button
+            type="button"
+            id="btn-check"
+            class="btn check"
+            onclick="handleCheckBalance()"
+            disabled>
+
+            📊 Check Balance
+
+        </button>
+
+        <button
+            type="button"
+            id="btn-reset"
+            class="btn reset"
+            onclick="resetATM()">
+
+            🚪 Eject Card
+
+        </button>
+
+    </section>
+
+    <footer class="atm-footer">
+        <small>
+            ATM Simulator • Built using HTML, CSS & JavaScript
+        </small>
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
+
 </body>
 </html>
